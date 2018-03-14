@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "A plotly.js Vue component",
   "main": "vue-plotly.js",
+  "files": ["vue-plotly.js"],
   "scripts": {
-    "build": "rm -rf dist && NODE_ENV=production webpack",
-    "test": ""
+    "build": "rm -rf vue-plotly.js && NODE_ENV=production webpack",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
