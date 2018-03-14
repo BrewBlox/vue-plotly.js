@@ -4,6 +4,7 @@
   "description": "A plotly.js Vue component",
   "main": "vue-plotly.js",
   "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production webpack",
     "test": ""
   },
   "repository": {
@@ -30,6 +31,11 @@
     "babel-preset-env": "^1.6.1",
     "vue": "^2.5.16",
     "vue-loader": "^14.2.1",
-    "webpack": "^4.1.1"
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  },
+  "dependencies": {
+    "plotly.js": "^1.35.2"
   }
 }
