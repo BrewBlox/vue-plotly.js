@@ -49,6 +49,7 @@ const updateEvents = [
 ];
 
 const isBrowser = typeof window !== 'undefined';
+const hasReactAPIMethod = !!Plotly.react;
 
 function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
@@ -166,9 +167,13 @@ export default {
 
   methods: {
     handlePropsUpdate() {
-      this.handlers = {};
+      if (!hasReactAPIMethod) {
+        this.handlers = {};
+      }
 
-      Plotly.react(this.$refs.plotly, {
+      const update = hasReactAPIMethod ? Plotly.react : Plotly.newPlot;
+
+      update(this.$refs.plotly, {
         data: this.data,
         layout: this.resizedLayoutIfFit(this.layout),
         config: this.config,
