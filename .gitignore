@@ -1,4 +1,4 @@
 node_modules/
 example/
-vue-plotly.js
-factory.js
+/vue-plotly.js
+/factory.js
