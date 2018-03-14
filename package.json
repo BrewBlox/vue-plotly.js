@@ -1,0 +1,27 @@
+{
+  "name": "vue-plotly.js",
+  "version": "1.0.0",
+  "description": "A plotly.js Vue component",
+  "main": "vue-plotly.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrewBlox/vue-plotly.js.git"
+  },
+  "keywords": [
+    "graphing",
+    "plotting",
+    "data",
+    "visualization",
+    "plotly",
+    "vue"
+  ],
+  "author": "BrewBlox",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrewBlox/vue-plotly.js/issues"
+  },
+  "homepage": "https://github.com/BrewBlox/vue-plotly.js#readme"
+}
