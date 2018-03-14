@@ -23,5 +23,13 @@
   "bugs": {
     "url": "https://github.com/BrewBlox/vue-plotly.js/issues"
   },
-  "homepage": "https://github.com/BrewBlox/vue-plotly.js#readme"
+  "homepage": "https://github.com/BrewBlox/vue-plotly.js#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "vue": "^2.5.16",
+    "vue-loader": "^14.2.1",
+    "webpack": "^4.1.1"
+  }
 }
