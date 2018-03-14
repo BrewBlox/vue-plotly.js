@@ -181,7 +181,7 @@ export default {
       })
         .then(() => this.syncEventHandlers())
         .then(() => this.syncWindowResize())
-        .then(() => this.attachUpdateEvents())
+        .then(() => { if (!hasReactAPIMethod) this.attachUpdateEvents(); })
         .then(() => this.handleUpdateWithProps(this.$props))
         .catch((e) => {
           console.error('Error while plotting:', e); // eslint-disable-line no-console
