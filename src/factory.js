@@ -303,7 +303,16 @@ export default function createPlotlyComponent(Plotly) {
     },
 
     render(createElement) {
-
+      return createElement(
+          'div',
+          {
+            props: {
+              id: this.$props.id,
+              class: this.$props.className,
+              ref: 'plotly',
+            },
+          },
+      );
     },
   };
 }
