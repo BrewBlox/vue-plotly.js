@@ -1,10 +1,10 @@
 {
   "name": "vue-plotly.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A plotly.js Vue component",
   "main": "vue-plotly.js",
   "types": "./vue-plotly.d.ts",
-  "files": ["vue-plotly.js", "vue-plotly.d.ts"],
+  "files": ["vue-plotly.js", "vue-plotly.d.ts", "factory.js"],
   "scripts": {
     "build": "rm -rf vue-plotly.js && NODE_ENV=production webpack",
     "prepublish": "npm run build"
