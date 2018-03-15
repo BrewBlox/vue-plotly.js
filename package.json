@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "build": "rm -rf vue-plotly.js && NODE_ENV=production webpack",
-    "prepublish": "npm run test && npm run build",
+    "prepare": "npm run test && npm run build",
     "dev": "webpack-dev-server --content-base example/",
     "lint": "eslint ./src",
     "test": "npm run lint"
