@@ -8,4 +8,7 @@ module.exports = {
   plugins: [
     'vue',
   ],
+  rules: {
+    'no-restricted-globals': 0,
+  }
 };
