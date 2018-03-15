@@ -8,9 +8,9 @@ module.exports = {
 
   entry: !development ? {
     'vue-plotly': './src/index.js',
-    'factory': './src/factory.js',
+    factory: './src/factory.js',
   } : {
-    'example': './example/example.js',
+    example: './example/example.js',
   },
 
   output: {
