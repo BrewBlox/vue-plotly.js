@@ -3,9 +3,11 @@ module.exports = {
 
   mode: process.env.NODE_ENV || 'development',
 
-  entry: {
+  entry: process.env.NODE_ENV === 'production' ? {
     'vue-plotly': './src/index.js',
     'factory': './src/factory.js',
+  } : {
+    'example': './example/example.js',
   },
 
   output: {
