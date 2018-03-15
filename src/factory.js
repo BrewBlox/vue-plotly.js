@@ -143,14 +143,14 @@ export default function createPlotlyComponent(Plotly) {
         config: this.config,
         frames: this.frames,
       })
-          .then(() => this.syncWindowResize(null, false))
-          .then(() => this.syncEventHandlers())
-          .then(() => this.attachUpdateEvents())
-          .then(() => this.$props.onInitialized(this.$refs.plotly))
-          .catch((e) => {
-            console.error('Error while plotting:', e); // eslint-disable-line no-console
-            return this.$props.onError();
-          });
+        .then(() => this.syncWindowResize(null, false))
+        .then(() => this.syncEventHandlers())
+        .then(() => this.attachUpdateEvents())
+        .then(() => this.$props.onInitialized(this.$refs.plotly))
+        .catch((e) => {
+          console.error('Error while plotting:', e); // eslint-disable-line no-console
+          return this.$props.onError();
+        });
     },
 
     beforeDestroy() {
@@ -184,16 +184,16 @@ export default function createPlotlyComponent(Plotly) {
           config: this.config,
           frames: this.frames,
         })
-            .then(() => this.syncEventHandlers())
-            .then(() => this.syncWindowResize())
-            .then(() => {
-              if (!hasReactAPIMethod) this.attachUpdateEvents();
-            })
-            .then(() => this.handleUpdateWithProps(this.$props))
-            .catch((e) => {
-              console.error('Error while plotting:', e); // eslint-disable-line no-console
-              return this.$props.onError();
-            });
+          .then(() => this.syncEventHandlers())
+          .then(() => this.syncWindowResize())
+          .then(() => {
+            if (!hasReactAPIMethod) this.attachUpdateEvents();
+          })
+          .then(() => this.handleUpdateWithProps(this.$props))
+          .catch((e) => {
+            console.error('Error while plotting:', e); // eslint-disable-line no-console
+            return this.$props.onError();
+          });
       },
 
       removeUpdateEvents() {
@@ -232,14 +232,14 @@ export default function createPlotlyComponent(Plotly) {
           if (prop && !hasHandler) {
             this.handlers[eventName] = prop;
             this.$refs.plotly.on(
-                `plotly_${eventName.toLowerCase()}`,
-                this.handlers[eventName],
+              `plotly_${eventName.toLowerCase()}`,
+              this.handlers[eventName],
             );
           } else if (!prop && hasHandler) {
             // Needs to be removed:
             this.$refs.plotly.removeListener(
-                `plotly_${eventName.toLowerCase()}`,
-                this.handlers[eventName],
+              `plotly_${eventName.toLowerCase()}`,
+              this.handlers[eventName],
             );
             delete this.handlers[eventName];
           }
@@ -304,14 +304,14 @@ export default function createPlotlyComponent(Plotly) {
 
     render(createElement) {
       return createElement(
-          'div',
-          {
-            props: {
-              id: this.$props.id,
-              class: this.$props.className,
-              ref: 'plotly',
-            },
+        'div',
+        {
+          props: {
+            id: this.$props.id,
+            class: this.$props.className,
           },
+          ref: 'plotly',
+        },
       );
     },
   };
