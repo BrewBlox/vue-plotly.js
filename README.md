@@ -35,7 +35,7 @@ import Plot from 'vue-plotly.js';
 export default {
   name: 'Example',
   components: {
-    Plotly,
+    Plot,
   },
   data: () => ({
     data: [
