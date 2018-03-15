@@ -4,10 +4,15 @@
   "description": "A plotly.js Vue component",
   "main": "vue-plotly.js",
   "types": "./vue-plotly.d.ts",
-  "files": ["vue-plotly.js", "vue-plotly.d.ts", "factory.js"],
+  "files": [
+    "vue-plotly.js",
+    "vue-plotly.d.ts",
+    "factory.js"
+  ],
   "scripts": {
     "build": "rm -rf vue-plotly.js && NODE_ENV=production webpack",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "dev": "webpack-dev-server --content-base example/"
   },
   "repository": {
     "type": "git",
@@ -35,7 +40,8 @@
     "vue-loader": "^14.2.1",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.12"
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
   },
   "dependencies": {
     "plotly.js": "^1.35.2"

@@ -1,9 +1,12 @@
+const ENV = process.env.NODE_ENV;
+const development = ENV !== 'production';
+
 module.exports = {
   context: __dirname,
 
-  mode: process.env.NODE_ENV || 'development',
+  mode: ENV || 'development',
 
-  entry: process.env.NODE_ENV === 'production' ? {
+  entry: !development ? {
     'vue-plotly': './src/index.js',
     'factory': './src/factory.js',
   } : {

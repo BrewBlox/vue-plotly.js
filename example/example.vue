@@ -14,7 +14,7 @@ export default {
   components: {
     Plotly: createPlotlyComponent(Plotly),
   },
-  data: {
+  data: () => ({
     data: [{
       x: [1, 2, 3, 4],
       y: [1, 3, 2, 6],
@@ -32,10 +32,6 @@ export default {
       plotBackground: '#f3f6fa',
       margin: { t: 0, r: 0, l: 20, b: 30 },
     }
-  }
+  }),
 }
 </script>
-
-<style scoped>
-
-</style>
