@@ -2,6 +2,7 @@
   <Plotly
     :data="data"
     :layout="layout"
+    :on-click="onClick"
   />
 </template>
 
@@ -38,5 +39,8 @@ export default {
       },
     },
   }),
+  methods: {
+    onClick: () => alert('Clicked!'),
+  },
 };
 </script>
