@@ -49,7 +49,7 @@ export default function createPlotlyComponent(Plotly) {
   return {
     name: 'Plotly',
 
-    props: {
+    props: Object.assign({}, {
       fit: {
         type: Boolean,
         default: () => false,
@@ -106,7 +106,12 @@ export default function createPlotlyComponent(Plotly) {
         default: () => {
         },
       },
-    },
+    }, eventNames.reduce((acc, event) => Object.assign({}, acc, {
+      [`on${event}`]: {
+        type: Function,
+        default: () => {},
+      },
+    }))),
 
     watch: {
       config() {
